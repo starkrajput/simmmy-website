@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Simmmy – Get in Touch</title>
+<meta name="description" content="Contact Simmmy's support team. Get help with your account, report issues, or share feedback. We respond within 4 hours.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.simmmy.com/contact.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💫</text></svg>">
+<link rel="stylesheet" href="assets/shared.css">
+<style>
+.contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:56px;align-items:start;padding:100px 0;}
+.cinfo-card{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius);padding:36px;backdrop-filter:blur(12px);}
+.cinfo-title{font-family:var(--font-display);font-size:1.5rem;font-weight:800;color:var(--text);margin-bottom:8px;}
+.cinfo-sub{font-size:.88rem;color:var(--text-2);line-height:1.7;margin-bottom:28px;}
+.cinfo-row{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-top:1px solid var(--border);}
+.cinfo-row:first-of-type{border-top:none;padding-top:0;}
+.ci-icon{font-size:1.4rem;flex-shrink:0;width:40px;height:40px;display:flex;align-items:center;justify-content:center;}
+.ci-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-3);margin-bottom:3px;}
+.ci-value{font-size:.9rem;font-weight:600;color:var(--text);}
+.ci-note{font-size:.78rem;color:var(--text-3);margin-top:2px;}
+.ci-link{color:var(--rose);text-decoration:none;}
+
+/* FORM */
+.contact-form-wrap{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius);padding:40px;backdrop-filter:blur(12px);}
+.cf-title{font-family:var(--font-display);font-size:1.5rem;font-weight:800;color:var(--text);margin-bottom:24px;}
+.form-row{margin-bottom:20px;}
+.form-row label{display:block;font-size:.8rem;font-weight:600;color:var(--text-2);margin-bottom:7px;text-transform:uppercase;letter-spacing:.5px;}
+.form-row input,.form-row select,.form-row textarea{
+  width:100%;background:var(--surface-2);border:1.5px solid var(--border);
+  border-radius:12px;padding:13px 16px;
+  font-family:var(--font-body);font-size:.9rem;color:var(--text);
+  outline:none;transition:border-color .3s;
+}
+.form-row input:focus,.form-row select:focus,.form-row textarea:focus{border-color:var(--rose);}
+.form-row textarea{resize:vertical;min-height:130px;line-height:1.6;}
+.form-row select{cursor:pointer;}
+.form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.submit-btn{width:100%;background:linear-gradient(135deg,var(--rose),var(--violet-mid));color:white;border:none;padding:15px 28px;border-radius:50px;font-family:var(--font-body);font-size:.97rem;font-weight:700;cursor:pointer;transition:all .35s;margin-top:8px;}
+.submit-btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(255,77,109,.4);}
+.success-msg{display:none;background:rgba(6,214,160,.1);border:1px solid rgba(6,214,160,.3);border-radius:12px;padding:16px 20px;text-align:center;margin-top:16px;font-size:.9rem;color:#06d6a0;}
+
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr;padding:70px 0;}}
+@media(max-width:500px){.form-row-2{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div id="starfield" aria-hidden="true"></div>
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon" style="overflow:hidden;"><img src="assets/logo2.png" alt="Simmmy" style="width:100%;height:100%;object-fit:cover;" onerror="this.outerHTML='💫'"></div>
+    <span class="nav-logo-text" style="font-size:1.5rem;font-weight:200;">simmmy</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="help.html">Help Centre</a></li>
+    <li><a href="safety.html">Safety</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="btn-theme" id="themeToggle" aria-label="Toggle theme">🌙</button>
+    <a href="download.html" class="btn btn-primary">📲 Download App</a>
+  </div>
+  <button class="nav-hamburger" id="hamburgerBtn" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="index.html">Home</a><a href="help.html">Help</a><a href="safety.html">Safety</a>
+  <a href="download.html" class="btn btn-primary" style="text-align:center;justify-content:center;">📲 Download App</a>
+</div>
+
+<main style="position:relative;z-index:1;">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- LEFT INFO -->
+      <div class="reveal">
+        <span class="section-label">Get in Touch</span>
+        <h1 class="section-title">We're here <em>for you</em></h1>
+        <p class="section-subtitle" style="margin-bottom:32px;">Our team responds within 4 hours, 7 days a week. No bots, no templates — real humans who care about your cosmic journey.</p>
+
+        <div class="cinfo-card">
+          <div class="cinfo-title">Contact Options</div>
+          <p class="cinfo-sub">Choose the option that best matches your question.</p>
+
+          <div class="cinfo-row">
+            <div class="ci-icon">💬</div>
+            <div>
+              <div class="ci-label">General Support</div>
+              <div class="ci-value"><a href="mailto:hello@simmmy.com" class="ci-link">hello@simmmy.com</a></div>
+              <div class="ci-note">Account, matching, app issues</div>
+            </div>
+          </div>
+
+          <div class="cinfo-row">
+            <div class="ci-icon">🛡️</div>
+            <div>
+              <div class="ci-label">Safety & Reports</div>
+              <div class="ci-value"><a href="mailto:safety@simmmy.com" class="ci-link">safety@simmmy.com</a></div>
+              <div class="ci-note">Report abuse, harassment, fake profiles</div>
+            </div>
+          </div>
+
+          <div class="cinfo-row">
+            <div class="ci-icon">💳</div>
+            <div>
+              <div class="ci-label">Billing & Subscriptions</div>
+              <div class="ci-value"><a href="mailto:billing@simmmy.com" class="ci-link">billing@simmmy.com</a></div>
+              <div class="ci-note">Refunds, payment issues, subscription queries</div>
+            </div>
+          </div>
+
+          <div class="cinfo-row">
+            <div class="ci-icon">🔒</div>
+            <div>
+              <div class="ci-label">Privacy & Data</div>
+              <div class="ci-value"><a href="mailto:privacy@simmmy.com" class="ci-link">privacy@simmmy.com</a></div>
+              <div class="ci-note">Data requests, deletion, GDPR/CCPA</div>
+            </div>
+          </div>
+
+          <div class="cinfo-row">
+            <div class="ci-icon">🤝</div>
+            <div>
+              <div class="ci-label">Partnerships & Events</div>
+              <div class="ci-value"><a href="mailto:partners@simmmy.com" class="ci-link">partners@simmmy.com</a></div>
+              <div class="ci-note">Venue partnerships, event hosting, press</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT FORM -->
+      <div class="reveal reveal-delay-2">
+        <div class="contact-form-wrap">
+          <div class="cf-title">Send us a message ✨</div>
+          <form id="contactForm" onsubmit="submitForm(event)">
+            <div class="form-row-2">
+              <div class="form-row">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="fname" placeholder="Your first name" required>
+              </div>
+              <div class="form-row">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname" placeholder="Your last name" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-row">
+              <label for="subject">What's this about?</label>
+              <select id="subject" name="subject" required>
+                <option value="" disabled selected>Select a topic</option>
+                <option>Account & Profile</option>
+                <option>Matching & Compatibility</option>
+                <option>Cosmic Features (Astrology/Tarot)</option>
+                <option>Subscription & Billing</option>
+                <option>Report a User or Safety Issue</option>
+                <option>Technical Issue / App Bug</option>
+                <option>Privacy & Data Request</option>
+                <option>Event Hosting / Partnership</option>
+                <option>General Feedback</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" placeholder="Tell us more about your question or issue…" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">✨ Send Message</button>
+          </form>
+          <div class="success-msg" id="successMsg">
+            ✅ Message sent! Our team will reply to your email within 4 hours.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="nav-logo" style="margin-bottom:14px;display:inline-flex">
+          <div class="nav-logo-icon" style="width:32px;height:32px;overflow:hidden;"><img src="assets/logo2.png" alt="" style="width:100%;height:100%;object-fit:cover;" onerror="this.outerHTML='💫'"></div>
+          <span class="nav-logo-text" style="font-size:1.3rem;font-weight:200;">simmmy</span>
+        </a>
+        <p class="footer-brand-desc">Connecting soulmates through astrology, tarot, and AI.</p>
+      </div>
+      <div><div class="footer-col-title">Navigate</div><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="events.html">Events</a></li><li><a href="success-stories.html">Stories</a></li><li><a href="download.html">Download</a></li></ul></div>
+      <div><div class="footer-col-title">Help</div><ul class="footer-links"><li><a href="help.html">Help Centre</a></li><li><a href="safety.html">Safety</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><div class="footer-col-title">Legal</div><ul class="footer-links"><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="cookie-policy.html">Cookies</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-bottom-text">© 2025 Simmmy Inc. All rights reserved.</p>
+      <div class="footer-bottom-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="cookie-policy.html">Cookies</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/shared.js"></script>
+<script>
+function submitForm(e) {
+  e.preventDefault();
+  const btn = document.querySelector('.submit-btn');
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+  setTimeout(() => {
+    document.getElementById('contactForm').style.display = 'none';
+    document.getElementById('successMsg').style.display = 'block';
+  }, 1200);
+}
+</script>
+</body>
+</html>

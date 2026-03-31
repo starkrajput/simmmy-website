@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Help Centre – Simmmy</title>
+<meta name="description" content="Get help with your Simmmy account, matching, subscriptions, safety, and more. Find answers to all your questions.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.simmmy.com/help.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💫</text></svg>">
+<link rel="stylesheet" href="assets/shared.css">
+<style>
+.help-hero{padding:140px 28px 60px;text-align:center;background:linear-gradient(180deg,var(--bg),var(--bg-2));position:relative;z-index:1;}
+.help-hero h1{font-family:var(--font-display);font-size:clamp(2rem,4vw,3.5rem);font-weight:900;margin-bottom:16px;color:var(--text);}
+.help-hero h1 em{font-style:italic;background:linear-gradient(135deg,var(--rose),var(--violet-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.search-box{display:flex;gap:0;max-width:520px;margin:24px auto 0;background:var(--card-bg);border:1.5px solid var(--border);border-radius:50px;overflow:hidden;backdrop-filter:blur(12px);}
+.search-box input{flex:1;background:none;border:none;padding:14px 22px;font-family:var(--font-body);font-size:.92rem;color:var(--text);outline:none;}
+.search-box input::placeholder{color:var(--text-3);}
+.search-box button{background:linear-gradient(135deg,var(--rose),var(--violet-mid));color:white;border:none;padding:12px 22px;cursor:pointer;font-weight:600;border-radius:0 50px 50px 0;font-family:var(--font-body);}
+
+.help-cats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:52px 0;}
+.hcat{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius);padding:28px 22px;text-align:center;cursor:pointer;transition:var(--transition);backdrop-filter:blur(10px);}
+.hcat:hover{transform:translateY(-4px);border-color:var(--border-hover);}
+.hcat-icon{font-size:2rem;margin-bottom:12px;display:block;}
+.hcat-title{font-family:var(--font-display);font-size:.95rem;font-weight:700;color:var(--text);margin-bottom:5px;}
+.hcat-count{font-size:.75rem;color:var(--text-3);}
+
+.help-section{margin-bottom:48px;}
+.hs-title{font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--text);margin-bottom:18px;display:flex;align-items:center;gap:8px;}
+.faq-item{border-bottom:1px solid var(--border);}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:17px 0;cursor:pointer;font-size:.93rem;font-weight:500;color:var(--text);gap:14px;background:none;border:none;width:100%;text-align:left;font-family:var(--font-body);}
+.faq-arrow{font-size:.75rem;color:var(--text-3);transition:transform .3s;flex-shrink:0;}
+.faq-item.open .faq-arrow{transform:rotate(180deg);color:var(--rose);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s;}
+.faq-a-inner{padding-bottom:16px;font-size:.88rem;color:var(--text-2);line-height:1.85;}
+.faq-a-inner a{color:var(--rose);}
+
+.contact-strip{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius);padding:36px;text-align:center;margin-top:52px;}
+.contact-strip h3{font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--text);margin-bottom:10px;}
+.contact-strip p{font-size:.88rem;color:var(--text-2);margin-bottom:20px;}
+.contact-strip-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+
+@media(max-width:768px){.help-cats{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:400px){.help-cats{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div id="starfield" aria-hidden="true"></div>
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon" style="overflow:hidden;"><img src="assets/logo2.png" alt="Simmmy" style="width:100%;height:100%;object-fit:cover;" onerror="this.outerHTML='💫'"></div>
+    <span class="nav-logo-text" style="font-size:1.5rem;font-weight:200;">simmmy</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="success-stories.html">Stories</a></li>
+    <li><a href="help.html" class="active">Help</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="btn-theme" id="themeToggle" aria-label="Toggle theme">🌙</button>
+    <a href="download.html" class="btn btn-primary">📲 Download App</a>
+  </div>
+  <button class="nav-hamburger" id="hamburgerBtn" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="index.html">Home</a><a href="events.html">Events</a><a href="help.html">Help</a>
+  <a href="download.html" class="btn btn-primary" style="text-align:center;justify-content:center;">📲 Download App</a>
+</div>
+
+<div class="help-hero">
+  <div class="page-hero-badge">🌟 Help Centre</div>
+  <h1>How can we <em>help?</em></h1>
+  <div class="search-box"><input type="text" placeholder="Search for answers…" aria-label="Search help articles"><button>Search</button></div>
+</div>
+
+<main class="section-pad" style="padding-top:40px;position:relative;z-index:1;">
+  <div class="container">
+
+    <!-- CATEGORIES -->
+    <div class="help-cats reveal">
+      <div class="hcat"><span class="hcat-icon">👤</span><div class="hcat-title">My Account</div><div class="hcat-count">12 articles</div></div>
+      <div class="hcat"><span class="hcat-icon">💳</span><div class="hcat-title">Subscriptions</div><div class="hcat-count">8 articles</div></div>
+      <div class="hcat"><span class="hcat-icon">🔮</span><div class="hcat-title">Cosmic Features</div><div class="hcat-count">10 articles</div></div>
+      <div class="hcat"><span class="hcat-icon">🛡️</span><div class="hcat-title">Safety & Trust</div><div class="hcat-count">9 articles</div></div>
+      <div class="hcat"><span class="hcat-icon">💬</span><div class="hcat-title">Messaging</div><div class="hcat-count">7 articles</div></div>
+      <div class="hcat"><span class="hcat-icon">📱</span><div class="hcat-title">Technical Issues</div><div class="hcat-count">11 articles</div></div>
+      <div class="hcat"><span class="hcat-icon">🌍</span><div class="hcat-title">Privacy & Data</div><div class="hcat-count">6 articles</div></div>
+      <div class="hcat"><span class="hcat-icon">🎪</span><div class="hcat-title">Events</div><div class="hcat-count">5 articles</div></div>
+    </div>
+
+    <!-- ACCOUNT FAQ -->
+    <div class="help-section reveal">
+      <div class="hs-title">👤 My Account</div>
+      <div class="faq-item"><button class="faq-q">How do I create a Simmmy account?<span class="faq-arrow">▼</span></button><div class="faq-a"><div class="faq-a-inner">Download Simmmy from the <a href="https://apps.apple.com" target="_blank" rel="noopener">App Store</a> or <a href="https://play.google.com" target="_blank" rel="noopener">Google Play</a>. Open the app and tap "Get Started." Enter your phone number or sign in with Google, Apple, or Facebook. Complete your profile and cosmic blueprint. You're ready to start matching!</div></div></div>
+      <div class="faq-item"><button class="faq-q">How do I delete my account?<span class="faq-arrow">▼</span></button><div class="faq-a"><div class="faq-a-inner">In the app: go to Profile → Settings → Account → Delete Account. Follow the confirmation steps. Your profile is removed immediately and your data is deleted within 30 days per our <a href="privacy.html">Privacy Policy</a>. Note: deleting your account does not automatically cancel a Premium subscription — you must cancel that separately through the App Store or Google Play.</div></div></div>
+      <div class="faq-item"><button class="faq-q">I forgot my password. How do I reset it?<span class="faq-arrow">▼</span></button><div class="faq-a"><div class="faq-a-inner">Simmmy uses phone number verification or social login (Google, Apple), so there is no traditional password. On the login screen, enter your phone number and we'll send a one-time verification code. If you signed in with Google or Apple, use the "Continue with Google/Apple" button on the login screen.</div></div></div>
+      <div class="faq-item"><button class="faq-q">Can I have more than one account?<span class="faq-arrow">▼</span></button><div class="faq-a"><div class="faq-a-inner">No. Our Terms of Use allow only one account per person. Creating multiple accounts to circumvent a ban or misrepresent yourself violates our guidelines and will result in all accounts being terminated.</div></div></div>
+    </div>
+
+    <!-- SUBSCRIPTION FAQ -->
+    <div class="help-section reveal">
+      <div class="hs-title">💳 Subscriptions & Billing</div>
+      <div class="faq-item"><button class="faq-q">How do I cancel my Simmmy Premium subscription?<span class="faq-arrow">▼</span></button><div class="faq-a"><div class="faq-a-inner"><strong>iOS:</strong> Go to your iPhone Settings → Apple ID → Subscriptions → Simmmy → Cancel. <br><strong>Android:</strong> Open Google Play → tap your profile icon → Payments & subscriptions → Subscriptions → Simmmy → Cancel. Cancellation takes effect at the end of your current billing period. You keep Premium access until then.</div></div></div>
+      <div class="faq-item"><button class="faq-q">How do I get a refund?<span class="faq-arrow">▼</span></button><div class="faq-a"><div class="faq-a-inner">EU/EEA/UK users are entitled to a full refund within 14 days of first subscribing. Certain US state residents have a 3-business-day cancellation right. For iOS refunds, contact Apple at <a href="https://getsupport.apple.com" target="_blank" rel="noopener">getsupport.apple.com</a>. For Google Play, request via <a href="https://play.google.com" target="_blank" rel="noopener">Google Play</a>. For all other billing queries, email <a href="mailto:billing@simmmy.com">billing@simmmy.com</a>.</div></div></div>
+      <div class="faq-item"><button class="faq-q">What's included in Simmmy Premium?<span class="faq-arrow">▼</span></button><div class="faq-a"><div class="faq-a-inner">Premium includes: unlimited daily matches, full cosmic compatibility reports (including complete natal charts), daily personalised tarot readings, moon phase love guidance, see who liked you, priority visibility, ad-free experience, access to exclusive Premium-only events, and Vibe Match (Spotify integration). Prices: ₹299/month India · $9.99/month USA · £7.99/month UK.</div></div></div>
+    </div>
+
+    <!-- COSMIC FAQ -->
+    <div class="help-section reveal">
+      <div class="hs-title">🔮 Cosmic Features</div>
+      <div class="faq-item"><button class="faq-q">Why do I need to provide my birth time and place?<span class="faq-arrow">▼</span></button><div class="faq-a"><div class="faq-a-inner">Your exact birth time and location are needed to calculate your full natal chart, specifically your rising sign (ascendant), which changes approximately every two hours. Without it, we can only calculate your sun sign — which gives a much less accurate compatibility picture. If you don't know your exact birth time, enter your best estimate or choose "Unknown" and we'll use a solar chart instead.</div></div></div>
+      <div class="faq-item"><button class="faq-q">Is my birth data kept private?<span class="faq-arrow">▼</span></button><div class="faq-a"><div class="faq-a-inner">Yes, absolutely. Your exact birth time and place are never displayed to other users or shared publicly. They are used only internally to calculate your cosmic compatibility scores. Other users see only your zodiac sun sign and life path number. Read our <a href="privacy.html#cosmic-data">Cosmic Data section in our Privacy Policy</a> for full details.</div></div></div>
+      <div class="faq-item"><button class="faq-q">How accurate is the compatibility score?<span class="faq-arrow">▼</span></button><div class="faq-a"><div class="faq-a-inner">Our compatibility algorithm combines 47 dimensions including natal chart synastry, tarot archetypes, numerology, and psychological profiling. Based on feedback from our couples community, users report that high-compatibility matches (85%+) have a significantly higher chance of developing into meaningful relationships. However, compatibility is one factor — genuine connection still requires effort, communication, and mutual care from both people.</div></div></div>
+    </div>
+
+    <!-- CONTACT STRIP -->
+    <div class="contact-strip reveal">
+      <h3>Still need help?</h3>
+      <p>Our support team is available 7 days a week. We typically respond within 4 hours.</p>
+      <div class="contact-strip-btns">
+        <a href="contact.html" class="btn btn-primary">💬 Contact Support</a>
+        <a href="mailto:hello@simmmy.com" class="btn btn-ghost">📧 hello@simmmy.com</a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="nav-logo" style="margin-bottom:14px;display:inline-flex">
+          <div class="nav-logo-icon" style="width:32px;height:32px;overflow:hidden;"><img src="assets/logo2.png" alt="" style="width:100%;height:100%;object-fit:cover;" onerror="this.outerHTML='💫'"></div>
+          <span class="nav-logo-text" style="font-size:1.3rem;font-weight:200;">simmmy</span>
+        </a>
+        <p class="footer-brand-desc">Cosmic soulmate matching powered by AI, astrology, and tarot.</p>
+      </div>
+      <div><div class="footer-col-title">Navigate</div><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="events.html">Events</a></li><li><a href="success-stories.html">Stories</a></li><li><a href="download.html">Download</a></li></ul></div>
+      <div><div class="footer-col-title">Help</div><ul class="footer-links"><li><a href="help.html">Help Centre</a></li><li><a href="safety.html">Safety Tips</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="community-guidelines.html">Guidelines</a></li></ul></div>
+      <div><div class="footer-col-title">Legal</div><ul class="footer-links"><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="cookie-policy.html">Cookies</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-bottom-text">© 2025 Simmmy Inc. All rights reserved.</p>
+      <div class="footer-bottom-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="cookie-policy.html">Cookies</a></div>
+    </div>
+  </div>
+</footer>
+<script src="assets/shared.js"></script>
+</body>
+</html>

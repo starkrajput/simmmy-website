@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Download Simmmy – Available on iOS & Android</title>
+<meta name="description" content="Download Simmmy for free on iOS and Android. Find your cosmic soulmate through astrology, tarot, and superintelligent AI matching.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.simmmy.com/download.html">
+<meta property="og:title" content="Download Simmmy App">
+<meta property="og:description" content="Find your cosmic soulmate. Download free on iOS & Android.">
+<meta property="og:image" content="https://www.simmmy.com/assets/og-home.jpg">
+<meta property="og:url" content="https://www.simmmy.com/download.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💫</text></svg>">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --rose:#ff4d6d;--violet-mid:#9d4edd;--violet-light:#c77dff;
+  --gold:#f4c430;--font-display:'Playfair Display',Georgia,serif;
+  --font-body:'DM Sans',system-ui,sans-serif;
+}
+[data-theme="dark"]{
+  --bg:#080510;--bg-2:#100720;--text:#f0e6ff;--text-2:#c4b0d9;--text-3:#7b6a96;
+  --border:rgba(157,78,221,0.18);--card-bg:rgba(22,9,48,0.9);--surface-2:rgba(120,45,160,0.12);
+}
+[data-theme="light"]{
+  --bg:#fef8ff;--bg-2:#f5e4ff;--text:#1a0a2e;--text-2:#4a2d6b;--text-3:#7b5fa0;
+  --border:rgba(157,78,221,0.2);--card-bg:rgba(255,250,255,0.97);--surface-2:rgba(157,78,221,0.07);
+}
+html,body{min-height:100vh;font-family:var(--font-body);}
+body{background:var(--bg);color:var(--text);transition:background .4s,color .4s;overflow-x:hidden;}
+
+/* STAR FIELD */
+#starfield{position:fixed;inset:0;pointer-events:none;z-index:0;}
+[data-theme="light"] #starfield{opacity:.1;}
+.star{position:absolute;border-radius:50%;background:white;animation:twinkle var(--d,3s) ease-in-out infinite var(--dl,0s);}
+@keyframes twinkle{0%,100%{opacity:.15;transform:scale(1);}50%{opacity:.9;transform:scale(1.4);}}
+
+/* TOP BAR */
+.topbar{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  height:60px;display:flex;align-items:center;justify-content:space-between;
+  padding:0 32px;
+  background:var(--bg);border-bottom:1px solid var(--border);
+  backdrop-filter:blur(20px);
+}
+.logo-link{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.logo-img{width:34px;height:34px;border-radius:10px;}
+.logo-name{font-family:var(--font-display);font-size:1.5rem;font-weight:900;
+  background:linear-gradient(135deg,var(--rose),var(--violet-light));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.topbar-right{display:flex;gap:12px;align-items:center;}
+.btn-theme{width:36px;height:36px;border-radius:50%;background:var(--surface-2);border:1px solid var(--border);
+  color:var(--text-2);cursor:pointer;font-size:.95rem;display:flex;align-items:center;justify-content:center;}
+.back-link{font-size:.85rem;color:var(--text-2);text-decoration:none;transition:color .3s;}
+.back-link:hover{color:var(--rose);}
+
+/* PAGE LAYOUT */
+.page{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  padding:80px 24px 40px;position:relative;z-index:1;
+}
+.card-wrap{
+  background:var(--card-bg);border:1px solid var(--border);
+  border-radius:28px;backdrop-filter:blur(20px);
+  padding:52px 48px;
+  display:flex;align-items:center;gap:72px;
+  max-width:900px;width:100%;
+  box-shadow:0 30px 80px rgba(0,0,0,.45);
+  animation:cardIn .7s cubic-bezier(0.22,1,0.36,1) both;
+}
+@keyframes cardIn{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+
+/* PHONE SIDE */
+.phone-side{flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:20px;}
+.phone-mockup{
+  width:200px;height:400px;
+  background:linear-gradient(180deg,#1a0a2e 0%,#0a0510 100%);
+  border:2px solid rgba(255,255,255,.12);border-radius:40px;
+  display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:14px;
+  box-shadow:0 0 0 8px rgba(255,255,255,.04),0 30px 60px rgba(0,0,0,.6);
+  position:relative;overflow:hidden;
+  padding:24px 16px;
+}
+[data-theme="light"] .phone-mockup{background:linear-gradient(180deg,#f5e4ff,#e8d0ff);}
+.phone-notch{
+  width:70px;height:8px;background:rgba(255,255,255,.15);
+  border-radius:4px;position:absolute;top:14px;
+}
+[data-theme="light"] .phone-notch{background:rgba(0,0,0,.15);}
+.phone-logo{
+  width:72px;height:72px;border-radius:20px;
+  background:linear-gradient(135deg,var(--rose),var(--violet-mid));
+  display:flex;align-items:center;justify-content:center;
+  font-size:2rem;box-shadow:0 8px 30px rgba(255,77,109,.5);
+  overflow:hidden;
+}
+.phone-logo img{width:100%;height:100%;object-fit:cover;}
+.phone-app-label{font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--text-3);margin-top:6px;}
+.phone-app-name{font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--text);text-align:center;}
+.phone-tagline{font-size:.75rem;color:var(--text-3);text-align:center;line-height:1.5;}
+.phone-rating{display:flex;align-items:center;gap:5px;margin-top:8px;}
+.phone-stars{color:var(--gold);font-size:.8rem;letter-spacing:1px;}
+.phone-rating-txt{font-size:.7rem;color:var(--text-3);}
+.phone-shimmer{
+  position:absolute;inset:0;
+  background:linear-gradient(135deg,transparent 40%,rgba(255,255,255,.03) 50%,transparent 60%);
+  animation:shimmer 3s ease-in-out infinite;
+}
+@keyframes shimmer{0%{transform:translateX(-100%);}100%{transform:translateX(100%);}}
+
+/* RIGHT SIDE */
+.info-side{flex:1;}
+.info-tag{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--surface-2);border:1px solid var(--border);
+  padding:5px 14px;border-radius:50px;
+  font-size:.72rem;font-weight:700;letter-spacing:1px;
+  text-transform:uppercase;color:var(--violet-light);
+  margin-bottom:18px;
+}
+.info-h1{font-family:var(--font-display);font-size:2rem;font-weight:900;
+  line-height:1.15;color:var(--text);margin-bottom:10px;}
+.info-h1 em{font-style:italic;background:linear-gradient(135deg,var(--rose),var(--violet-light));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.info-sub{font-size:.9rem;color:var(--text-2);line-height:1.7;margin-bottom:28px;}
+
+/* QR SECTION */
+.qr-section{display:flex;gap:20px;align-items:flex-start;margin-bottom:26px;}
+.qr-wrap{
+  background:white;border-radius:16px;padding:12px;
+  box-shadow:0 4px 20px rgba(0,0,0,.2);flex-shrink:0;
+}
+.qr-wrap canvas,.qr-wrap svg{display:block;}
+.qr-labels{display:flex;flex-direction:column;justify-content:center;gap:6px;}
+.qr-title{font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--text);}
+.qr-sub{font-size:.82rem;color:var(--text-2);line-height:1.6;}
+
+/* DIVIDER */
+.or-row{display:flex;align-items:center;gap:12px;margin:20px 0;}
+.or-line{flex:1;height:1px;background:var(--border);}
+.or-text{font-size:.75rem;color:var(--text-3);text-transform:uppercase;letter-spacing:1px;}
+
+/* STORE BUTTONS */
+.store-btns{display:flex;flex-direction:column;gap:12px;}
+.store-btn{
+  display:flex;align-items:center;gap:14px;
+  padding:13px 20px;border-radius:14px;
+  border:1.5px solid var(--border);
+  background:var(--surface-2);
+  text-decoration:none;color:var(--text);
+  transition:all .35s cubic-bezier(0.25,0.46,0.45,0.94);
+  position:relative;overflow:hidden;
+}
+.store-btn::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(255,77,109,.08),rgba(157,78,221,.08));
+  opacity:0;transition:opacity .35s;
+}
+.store-btn:hover{border-color:var(--rose);transform:translateX(4px);box-shadow:0 6px 24px rgba(255,77,109,.2);}
+.store-btn:hover::before{opacity:1;}
+.store-btn-img{height:36px;width:auto;object-fit:contain;flex-shrink:0;border-radius:6px;}
+.store-btn-icon{font-size:1.8rem;flex-shrink:0;line-height:1;}
+.store-btn-txt{flex:1;}
+.store-btn-small{font-size:.68rem;color:var(--text-3);display:block;}
+.store-btn-big{font-size:.98rem;font-weight:700;display:block;margin-top:1px;}
+.store-btn-badge{
+  background:linear-gradient(135deg,var(--rose),var(--violet-mid));
+  color:white;font-size:.62rem;font-weight:700;
+  padding:3px 8px;border-radius:20px;flex-shrink:0;
+}
+
+/* FEATURES STRIP */
+.feat-strip{display:flex;gap:18px;margin-top:24px;flex-wrap:wrap;}
+.feat-chip{
+  display:flex;align-items:center;gap:6px;
+  background:var(--surface-2);border:1px solid var(--border);
+  padding:6px 12px;border-radius:20px;
+  font-size:.75rem;color:var(--text-2);font-weight:500;
+}
+
+/* AUTO REDIRECT BANNER */
+.redirect-banner{
+  background:linear-gradient(135deg,rgba(255,77,109,.15),rgba(157,78,221,.15));
+  border:1px solid rgba(255,77,109,.3);border-radius:12px;
+  padding:12px 16px;margin-bottom:20px;
+  display:none;align-items:center;gap:10px;font-size:.83rem;color:var(--text-2);
+}
+.redirect-banner.show{display:flex;}
+.rb-icon{font-size:1.2rem;flex-shrink:0;}
+.rb-progress{flex:1;height:4px;background:rgba(255,255,255,.1);border-radius:2px;margin-top:6px;overflow:hidden;}
+.rb-fill{height:100%;background:linear-gradient(90deg,var(--rose),var(--violet-mid));border-radius:2px;width:0%;transition:width 3s linear;}
+
+/* RESPONSIVE */
+@media(max-width:700px){
+  .card-wrap{flex-direction:column;padding:36px 24px;gap:36px;align-items:center;}
+  .info-side{text-align:center;}
+  .qr-section{flex-direction:column;align-items:center;}
+  .store-btns{flex-direction:row;flex-wrap:wrap;}
+  .store-btn{flex:1;min-width:140px;}
+  .feat-strip{justify-content:center;}
+  .or-row{display:none;}
+}
+@media(max-width:400px){
+  .store-btns{flex-direction:column;}
+  .info-h1{font-size:1.6rem;}
+}
+</style>
+</head>
+<body>
+<!-- STAR FIELD -->
+<div id="starfield" aria-hidden="true"></div>
+
+<!-- TOP BAR -->
+<header class="topbar">
+  <a href="index.html" class="logo-link" aria-label="Simmmy home">
+    <div style="width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--rose),var(--violet-mid));display:flex;align-items:center;justify-content:center;font-size:1.1rem;overflow:hidden;">
+      <img src="assets/logo2.png" alt="Simmmy logo" style="width:100%;height:100%;object-fit:cover;" onerror="this.outerHTML='💫'">
+    </div>
+    <span class="logo-name">simmmy</span>
+  </a>
+  <div class="topbar-right">
+    <button class="btn-theme" id="themeToggle" aria-label="Toggle theme">🌙</button>
+    <a href="index.html" class="back-link">← Back to site</a>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main class="page">
+  <div class="card-wrap">
+
+    <!-- PHONE MOCKUP -->
+    <div class="phone-side">
+      <div class="phone-mockup">
+        <div class="phone-notch"></div>
+        <div class="phone-shimmer"></div>
+        <div class="phone-logo">
+          <img src="assets/logo2.png" alt="Simmmy" onerror="this.outerHTML='💫'">
+        </div>
+        <div class="phone-app-label">simmmy</div>
+        <div class="phone-app-name">Your Cosmic<br>Soulmate App</div>
+        <div class="phone-tagline">Astrology · Tarot · AI<br>Find love written in the stars</div>
+        <div class="phone-rating">
+          <span class="phone-stars">★★★★★</span>
+          <span class="phone-rating-txt">4.8 · 284K reviews</span>
+        </div>
+      </div>
+
+      <!-- Platform badges under phone -->
+      <div style="display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap;">
+        <div style="display:flex;align-items:center;gap:5px;background:var(--surface-2);border:1px solid var(--border);padding:5px 10px;border-radius:20px;font-size:.7rem;color:var(--text-3);">
+          🍎 iOS 14+
+        </div>
+        <div style="display:flex;align-items:center;gap:5px;background:var(--surface-2);border:1px solid var(--border);padding:5px 10px;border-radius:20px;font-size:.7rem;color:var(--text-3);">
+          🤖 Android 8+
+        </div>
+        <div style="display:flex;align-items:center;gap:5px;background:var(--surface-2);border:1px solid var(--border);padding:5px 10px;border-radius:20px;font-size:.7rem;color:var(--text-3);">
+          ✨ Free
+        </div>
+      </div>
+    </div>
+
+    <!-- INFO SIDE -->
+    <div class="info-side">
+      <div class="info-tag">📲 Download Now</div>
+
+      <!-- Auto-redirect banner (shown on mobile) -->
+      <div class="redirect-banner" id="redirectBanner">
+        <span class="rb-icon">📱</span>
+        <div style="flex:1">
+          <div style="font-weight:600;margin-bottom:4px;">Detected: <span id="detectedOS">your device</span></div>
+          <div>Redirecting you to the <span id="detectedStore">store</span> automatically…</div>
+          <div class="rb-progress"><div class="rb-fill" id="progressFill"></div></div>
+        </div>
+      </div>
+
+      <h1 class="info-h1">Download <em>simmmy</em><br>on your phone</h1>
+      <p class="info-sub">Scan the QR code with your phone camera to download instantly — or tap your store below. Free to download, free to match.</p>
+
+      <!-- QR CODE -->
+      <div class="qr-section">
+        <div class="qr-wrap">
+          <canvas id="qrCanvas" width="140" height="140" aria-label="QR code to download simmmy app"></canvas>
+        </div>
+        <div class="qr-labels">
+          <div class="qr-title">Scan to download</div>
+          <p class="qr-sub">Point your phone camera at this QR code. Works for both iPhone and Android — it auto-detects your device.</p>
+          <div style="display:flex;align-items:center;gap:6px;margin-top:8px;font-size:.75rem;color:var(--text-3);">
+            <span style="color:var(--rose)">●</span> No app needed to scan
+          </div>
+        </div>
+      </div>
+
+      <div class="or-row"><div class="or-line"></div><span class="or-text">or</span><div class="or-line"></div></div>
+
+      <!-- STORE BUTTONS -->
+      <div class="store-btns">
+        <a href="https://apps.apple.com" class="store-btn" rel="noopener" target="_blank" id="iosBtn" aria-label="Download Simmmy on the App Store">
+          <!-- Use actual image if available -->
+          <img src="assets/applestore.webp" alt="App Store" class="store-btn-img" onerror="this.outerHTML='<span class=store-btn-icon>🍎</span>'">
+          <div class="store-btn-txt">
+            <span class="store-btn-small">Download on the</span>
+            <span class="store-btn-big">App Store</span>
+          </div>
+          <span class="store-btn-badge">FREE</span>
+        </a>
+
+        <a href="https://play.google.com" class="store-btn" rel="noopener" target="_blank" id="androidBtn" aria-label="Get Simmmy on Google Play">
+          <img src="assets/playstore.webp" alt="Google Play" class="store-btn-img" onerror="this.outerHTML='<span class=store-btn-icon>▶️</span>'">
+          <div class="store-btn-txt">
+            <span class="store-btn-small">Get it on</span>
+            <span class="store-btn-big">Google Play</span>
+          </div>
+          <span class="store-btn-badge">FREE</span>
+        </a>
+      </div>
+
+      <!-- FEATURES STRIP -->
+      <div class="feat-strip">
+        <div class="feat-chip">✨ Astrology Matching</div>
+        <div class="feat-chip">🔮 Daily Tarot</div>
+        <div class="feat-chip">🌙 Moon Phases</div>
+        <div class="feat-chip">🛡️ Verified Profiles</div>
+        <div class="feat-chip">💬 AI Ice Breaker</div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- FOOTER NOTE -->
+<footer style="text-align:center;padding:20px;font-size:.78rem;color:var(--text-3);position:relative;z-index:1;">
+  © 2025 Simmmy Inc. · <a href="privacy.html" style="color:var(--rose)">Privacy</a> · <a href="terms.html" style="color:var(--rose)">Terms</a>
+</footer>
+
+<script>
+/* ── STARFIELD ── */
+const sf = document.getElementById('starfield');
+for(let i=0;i<120;i++){
+  const s=document.createElement('div');s.className='star';
+  const sz=Math.random()*2.5+.5;
+  s.style.cssText=`width:${sz}px;height:${sz}px;left:${Math.random()*100}%;top:${Math.random()*100}%;--d:${(Math.random()*4+2).toFixed(1)}s;--dl:-${(Math.random()*6).toFixed(1)}s;opacity:${(Math.random()*.4+.1).toFixed(2)};`;
+  sf.appendChild(s);
+}
+
+/* ── THEME ── */
+const html=document.documentElement;
+const btn=document.getElementById('themeToggle');
+const saved=localStorage.getItem('simmy-theme')||'dark';
+html.setAttribute('data-theme',saved);
+btn.textContent=saved==='dark'?'☀️':'🌙';
+btn.addEventListener('click',()=>{
+  const next=html.getAttribute('data-theme')==='dark'?'light':'dark';
+  html.setAttribute('data-theme',next);
+  btn.textContent=next==='dark'?'☀️':'🌙';
+  localStorage.setItem('simmy-theme',next);
+});
+
+/* ── QR CODE GENERATOR (pure JS, no library) ── */
+/* We'll use a simple QR API approach */
+(function generateQR(){
+  const canvas=document.getElementById('qrCanvas');
+  const ctx=canvas.getContext('2d');
+  const size=140;
+  // Use QR Server API to generate QR → draw as image
+  const url='https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=https://simmmy.com/download&color=ff4d6d&bgcolor=transparent&format=png&qzone=1';
+  const img=new Image();
+  img.crossOrigin='anonymous';
+  img.onload=function(){
+    ctx.clearRect(0,0,size,size);
+    ctx.drawImage(img,0,0,size,size);
+  };
+  img.onerror=function(){
+    // Fallback: draw a simple placeholder
+    ctx.fillStyle='#f0e6ff';
+    ctx.fillRect(0,0,size,size);
+    ctx.fillStyle='#ff4d6d';
+    ctx.font='bold 11px DM Sans,sans-serif';
+    ctx.textAlign='center';
+    ctx.fillText('Scan to',70,55);
+    ctx.fillText('Download',70,70);
+    ctx.fillText('simmmy',70,85);
+    // Draw corner squares like QR
+    [[8,8],[8,102],[102,8]].forEach(([x,y])=>{
+      ctx.fillStyle='#9d4edd';
+      ctx.fillRect(x,y,30,30);
+      ctx.fillStyle='#f0e6ff';
+      ctx.fillRect(x+5,y+5,20,20);
+      ctx.fillStyle='#9d4edd';
+      ctx.fillRect(x+9,y+9,12,12);
+    });
+  };
+  img.src=url;
+})();
+
+/* ── DEVICE DETECTION & AUTO REDIRECT ── */
+function detectOS(){
+  const ua=navigator.userAgent;
+  if(/iPhone|iPad|iPod/.test(ua)) return 'ios';
+  if(/Android/.test(ua)) return 'android';
+  return 'desktop';
+}
+
+const os=detectOS();
+const banner=document.getElementById('redirectBanner');
+const fill=document.getElementById('progressFill');
+const detectedOS=document.getElementById('detectedOS');
+const detectedStore=document.getElementById('detectedStore');
+const iosBtn=document.getElementById('iosBtn');
+const androidBtn=document.getElementById('androidBtn');
+
+if(os==='ios'){
+  // Highlight iOS button
+  iosBtn.style.borderColor='var(--rose)';
+  iosBtn.style.background='rgba(255,77,109,.1)';
+  // Show redirect banner
+  banner.classList.add('show');
+  detectedOS.textContent='iPhone / iPad';
+  detectedStore.textContent='App Store';
+  // Animate progress then redirect
+  setTimeout(()=>{ fill.style.width='100%'; },100);
+  setTimeout(()=>{ window.location.href='https://apps.apple.com'; },3200);
+
+} else if(os==='android'){
+  // Highlight Android button
+  androidBtn.style.borderColor='var(--rose)';
+  androidBtn.style.background='rgba(255,77,109,.1)';
+  // Show redirect banner
+  banner.classList.add('show');
+  detectedOS.textContent='Android device';
+  detectedStore.textContent='Google Play';
+  // Animate progress then redirect
+  setTimeout(()=>{ fill.style.width='100%'; },100);
+  setTimeout(()=>{ window.location.href='https://play.google.com'; },3200);
+}
+</script>
+</body>
+</html>
