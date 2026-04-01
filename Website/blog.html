@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>simmmy Blog – Astrology, Love, Tarot & Dating Insights</title>
+<meta name="description" content="Expert guides on astrology compatibility, tarot for love, numerology, and cosmic dating. Find your soulmate with the wisdom of the stars.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.simmmy.com/blog.html">
+<meta property="og:title" content="simmmy Blog – Astrology & Love Insights">
+<meta property="og:description" content="Expert guides on astrology compatibility, tarot for love, and cosmic dating.">
+<meta property="og:url" content="https://www.simmmy.com/blog.html">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@1,300&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💫</text></svg>">
+<link rel="stylesheet" href="assets/shared.css">
+<style>
+:root{--gold-soft:#f4c430;}
+/* HERO */
+.blog-hero{padding:140px 28px 70px;text-align:center;background:linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%);position:relative;z-index:1;}
+.blog-hero h1{font-family:var(--font-display);font-size:clamp(2.4rem,5vw,4rem);font-weight:900;margin-bottom:14px;}
+.blog-hero h1 em{font-style:italic;background:linear-gradient(135deg,var(--rose),var(--violet-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.blog-hero p{font-family:var(--font-accent);font-style:italic;font-size:1.1rem;color:var(--text-2);max-width:500px;margin:0 auto;line-height:1.85;font-weight:300;}
+
+/* CATEGORY PILLS */
+.cat-pills{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:52px;}
+.cat-pill{padding:8px 18px;border-radius:50px;border:1.5px solid var(--border);background:var(--surface-2);color:var(--text-2);font-size:.82rem;font-weight:500;cursor:pointer;transition:all .3s;text-decoration:none;}
+.cat-pill:hover,.cat-pill.active{border-color:var(--rose);color:var(--rose);background:rgba(255,77,109,.08);}
+
+/* FEATURED POST */
+.featured-post{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;display:grid;grid-template-columns:1fr 1fr;margin-bottom:52px;backdrop-filter:blur(12px);transition:var(--transition);}
+.featured-post:hover{box-shadow:0 16px 50px rgba(157,78,221,.2);}
+.fp-img{min-height:360px;position:relative;overflow:hidden;background:var(--bg-3);display:flex;align-items:center;justify-content:center;font-size:6rem;}
+.fp-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.fp-img-ov{position:absolute;inset:0;background:linear-gradient(90deg,transparent 60%,var(--card-bg));z-index:1;}
+.fp-body{padding:44px 40px;display:flex;flex-direction:column;justify-content:center;}
+.fp-cat{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--rose);margin-bottom:12px;}
+.fp-title{font-family:var(--font-display);font-size:1.7rem;font-weight:800;color:var(--text);line-height:1.2;margin-bottom:12px;}
+.fp-excerpt{font-family:var(--font-accent);font-style:italic;font-size:.95rem;color:var(--text-2);line-height:1.85;margin-bottom:20px;font-weight:300;}
+.fp-meta{display:flex;align-items:center;gap:12px;font-size:.78rem;color:var(--text-3);margin-bottom:20px;}
+.fp-avatar{width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,var(--rose),var(--violet-mid));display:flex;align-items:center;justify-content:center;font-size:.8rem;flex-shrink:0;}
+.read-link{display:inline-flex;align-items:center;gap:6px;color:var(--rose);font-weight:600;font-size:.88rem;text-decoration:none;transition:gap .3s;}
+.read-link:hover{gap:10px;}
+
+/* BLOG GRID */
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.blog-card{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:var(--transition);backdrop-filter:blur(12px);}
+.blog-card:hover{transform:translateY(-5px);box-shadow:0 14px 40px rgba(157,78,221,.18);}
+.bc-img{height:180px;position:relative;overflow:hidden;background:var(--bg-3);display:flex;align-items:center;justify-content:center;font-size:4rem;}
+.bc-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s;}
+.blog-card:hover .bc-img img{transform:scale(1.06);}
+.bc-img-ov{position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.55));z-index:1;}
+.bc-cat-pill{position:absolute;top:12px;left:12px;background:linear-gradient(135deg,var(--rose),var(--violet-mid));color:#fff;font-size:.65rem;font-weight:700;padding:4px 10px;border-radius:20px;z-index:2;text-transform:uppercase;letter-spacing:.5px;}
+.bc-body{padding:20px 22px;}
+.bc-title{font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:var(--text);line-height:1.3;margin-bottom:8px;}
+.bc-excerpt{font-size:.82rem;color:var(--text-3);line-height:1.7;margin-bottom:14px;}
+.bc-meta{display:flex;align-items:center;justify-content:space-between;font-size:.74rem;color:var(--text-3);}
+.bc-read{color:var(--rose);font-weight:600;text-decoration:none;transition:color .3s;}
+.bc-read:hover{color:var(--violet-light);}
+
+/* NEWSLETTER */
+.newsletter-box{background:linear-gradient(135deg,var(--bg-2),var(--bg-3));border:1px solid var(--border);border-radius:var(--radius);padding:52px;text-align:center;margin:70px 0 0;}
+.nl-h2{font-family:var(--font-display);font-size:1.9rem;font-weight:800;color:var(--text);margin-bottom:10px;}
+.nl-h2 em{font-style:italic;color:var(--rose);}
+.nl-sub{font-family:var(--font-accent);font-style:italic;font-size:1rem;color:var(--text-2);max-width:440px;margin:0 auto 24px;line-height:1.8;}
+.nl-form{display:flex;gap:0;max-width:420px;margin:0 auto;background:var(--card-bg);border:1.5px solid var(--border);border-radius:50px;overflow:hidden;}
+.nl-form input{flex:1;background:none;border:none;padding:13px 20px;font-family:var(--font-body);font-size:.88rem;color:var(--text);outline:none;}
+.nl-form input::placeholder{color:var(--text-3);}
+.nl-form button{background:linear-gradient(135deg,var(--rose),var(--violet-mid));color:white;border:none;padding:11px 22px;font-family:var(--font-body);font-weight:600;font-size:.88rem;cursor:pointer;border-radius:0 50px 50px 0;transition:all .3s;}
+.nl-form button:hover{box-shadow:0 4px 20px rgba(255,77,109,.35);}
+
+/* TOPICS SIDEBAR STRIP */
+.topics-strip{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:40px;}
+.topic-tag{background:var(--surface-2);border:1px solid var(--border);color:var(--text-3);font-size:.75rem;font-weight:500;padding:5px 12px;border-radius:20px;cursor:pointer;transition:all .3s;text-decoration:none;}
+.topic-tag:hover{border-color:var(--rose);color:var(--rose);}
+
+@media(max-width:900px){.featured-post{grid-template-columns:1fr;}.fp-img{min-height:220px;}.fp-img-ov{background:linear-gradient(180deg,transparent 60%,var(--card-bg));}.fp-body{padding:28px 24px;}.blog-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.blog-grid{grid-template-columns:1fr;}.newsletter-box{padding:32px 20px;}}
+</style>
+</head>
+<body>
+<div id="starfield" aria-hidden="true"></div>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon" style="overflow:hidden;"><img src="assets/logo2.png" alt="simmmy" style="width:100%;height:100%;object-fit:cover;" onerror="this.outerHTML='💫'"></div>
+    <span class="nav-logo-text" style="font-size:1.5rem;font-weight:200;">simmmy</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="success-stories.html">Stories</a></li>
+    <li><a href="index.html#faq">FAQ</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="btn-theme" id="themeToggle" aria-label="Toggle theme">🌙</button>
+    <a href="download.html" class="btn btn-primary">📲 Download App</a>
+  </div>
+  <button class="nav-hamburger" id="hamburgerBtn" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="index.html">Home</a><a href="blog.html">Blog</a><a href="events.html">Events</a><a href="success-stories.html">Stories</a>
+  <a href="download.html" class="btn btn-primary" style="text-align:center;justify-content:center;">📲 Download App</a>
+</div>
+
+<!-- HERO -->
+<div class="blog-hero">
+  <div class="page-hero-badge">✍️ The Cosmic Journal</div>
+  <h1>Love, Stars &amp; <em>Soul</em></h1>
+  <p>Expert guides on astrology compatibility, tarot for love, numerology, and finding your cosmic soulmate.</p>
+</div>
+
+<main class="section-pad" style="padding-top:0;position:relative;z-index:1;">
+  <div class="container">
+
+    <!-- CATEGORY PILLS -->
+    <div class="cat-pills">
+      <a href="#" class="cat-pill active">All Posts</a>
+      <a href="#" class="cat-pill">♈ Astrology</a>
+      <a href="#" class="cat-pill">🔮 Tarot</a>
+      <a href="#" class="cat-pill">🔢 Numerology</a>
+      <a href="#" class="cat-pill">💕 Dating Tips</a>
+      <a href="#" class="cat-pill">🌙 Moon &amp; Planets</a>
+      <a href="#" class="cat-pill">💑 Relationships</a>
+    </div>
+
+    <!-- FEATURED POST -->
+    <article class="featured-post reveal">
+      <div class="fp-img">
+        ✨
+        <!-- IMAGE PROMPT: "Beautiful editorial flat-lay of astrology tools — open natal chart wheel, tarot cards (The Lovers visible), crystals, dried flowers, constellation map, on dark velvet surface with soft golden candlelight, romantic mystical aesthetic, photorealistic product photography" -->
+        <img src="assets/blog-featured.jpg" alt="Astrology compatibility guide" loading="lazy">
+        <div class="fp-img-ov"></div>
+      </div>
+      <div class="fp-body">
+        <div class="fp-cat">✨ Featured · Astrology</div>
+        <h2 class="fp-title">The Complete 2025 Guide to Astrology Compatibility in Dating</h2>
+        <p class="fp-excerpt">Everything you need to know about sun signs, moon signs, rising signs, and Venus placements — and how they determine romantic chemistry between two people.</p>
+        <div class="fp-meta">
+          <div class="fp-avatar">🌙</div>
+          <span>Dr. Priya Sharma, Astrologer</span>
+          <span>·</span>
+          <span>Mar 28, 2025</span>
+          <span>·</span>
+          <span>12 min read</span>
+        </div>
+        <a href="blog/astrology-compatibility-guide.html" class="read-link">Read the Full Guide →</a>
+      </div>
+    </article>
+
+    <!-- TOPICS STRIP -->
+    <div class="topics-strip reveal">
+      <span style="font-size:.78rem;color:var(--text-3);font-weight:600;padding:5px 0;">Popular topics:</span>
+      <a href="#" class="topic-tag">Venus in Taurus</a>
+      <a href="#" class="topic-tag">Scorpio compatibility</a>
+      <a href="#" class="topic-tag">Life path numbers</a>
+      <a href="#" class="topic-tag">The Lovers tarot</a>
+      <a href="#" class="topic-tag">Full moon dating</a>
+      <a href="#" class="topic-tag">Attachment styles</a>
+      <a href="#" class="topic-tag">Best dating app India 2025</a>
+      <a href="#" class="topic-tag">Aries love life</a>
+      <a href="#" class="topic-tag">Mercury retrograde relationships</a>
+    </div>
+
+    <!-- BLOG GRID -->
+    <div class="blog-grid">
+
+      <article class="blog-card reveal reveal-delay-1">
+        <div class="bc-img">
+          ♌
+          <!-- IMAGE PROMPT: "Stylish editorial photo of two zodiac wheels overlapping, rose gold and deep purple tones, cosmic background with stars, romantic mystical aesthetic, photorealistic editorial photography" -->
+          <img src="assets/blog-leo-compat.jpg" alt="Leo Compatibility Guide" loading="lazy">
+          <div class="bc-img-ov"></div>
+          <span class="bc-cat-pill">Astrology</span>
+        </div>
+        <div class="bc-body">
+          <div class="bc-title">Leo Compatibility: Which Signs Make the Perfect Match?</div>
+          <p class="bc-excerpt">Leo's fire energy is magnetic — but not everyone can handle the heat. Discover which signs truly complement a Leo's passion and which create sparks that burn.</p>
+          <div class="bc-meta">
+            <span>⏱ 8 min · Mar 22</span>
+            <a href="blog/leo-compatibility.html" class="bc-read">Read →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card reveal reveal-delay-2">
+        <div class="bc-img">
+          🔮
+          <!-- IMAGE PROMPT: "Close-up of tarot card 'The Lovers' on a dark velvet surface, surrounded by rose petals, crystals and soft candlelight, romantic mystical mood, editorial product photography" -->
+          <img src="assets/blog-tarot-love.jpg" alt="Tarot Love Reading Guide" loading="lazy">
+          <div class="bc-img-ov"></div>
+          <span class="bc-cat-pill">Tarot</span>
+        </div>
+        <div class="bc-body">
+          <div class="bc-title">How to Do a Tarot Love Reading: A Beginner's Complete Guide</div>
+          <p class="bc-excerpt">From The Lovers to The Two of Cups — learn which tarot cards signal romance, what each placement means for your love life, and how simmmy uses tarot for matching.</p>
+          <div class="bc-meta">
+            <span>⏱ 10 min · Mar 18</span>
+            <a href="blog/tarot-love-reading.html" class="bc-read">Read →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card reveal reveal-delay-3">
+        <div class="bc-img">
+          🔢
+          <!-- IMAGE PROMPT: "Beautiful artistic photo of numerology number calculations written in golden ink on aged paper, surrounded by crystals, a compass, and soft warm light, mystical editorial photography" -->
+          <img src="assets/blog-numerology.jpg" alt="Numerology Love Compatibility" loading="lazy">
+          <div class="bc-img-ov"></div>
+          <span class="bc-cat-pill">Numerology</span>
+        </div>
+        <div class="bc-body">
+          <div class="bc-title">Numerology Love Compatibility: What Your Life Path Number Says About Your Soulmate</div>
+          <p class="bc-excerpt">Your life path number — calculated from your birth date — reveals the kind of love you're destined for. Here's the complete guide to numerology compatibility.</p>
+          <div class="bc-meta">
+            <span>⏱ 9 min · Mar 14</span>
+            <a href="blog/numerology-love-compatibility.html" class="bc-read">Read →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card reveal">
+        <div class="bc-img">
+          ♏
+          <!-- IMAGE PROMPT: "Moody editorial photo representing Scorpio zodiac sign — deep teal and crimson tones, water droplets, a scorpion constellation drawn in light on a dark background, celestial art photography" -->
+          <img src="assets/blog-scorpio.jpg" alt="Scorpio Compatibility" loading="lazy">
+          <div class="bc-img-ov"></div>
+          <span class="bc-cat-pill">Astrology</span>
+        </div>
+        <div class="bc-body">
+          <div class="bc-title">Scorpio Compatibility: The Intense Truth About Dating a Scorpio</div>
+          <p class="bc-excerpt">Scorpio relationships are never shallow. Discover who thrives next to Scorpio's depth and intensity — and who simply can't survive the water sign's emotional ocean.</p>
+          <div class="bc-meta">
+            <span>⏱ 7 min · Mar 10</span>
+            <a href="blog/scorpio-compatibility.html" class="bc-read">Read →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card reveal reveal-delay-1">
+        <div class="bc-img">
+          🌙
+          <!-- IMAGE PROMPT: "Beautiful photo of full moon reflected on a still ocean at night, warm stars visible in sky, romantic atmospheric mood, long exposure night photography" -->
+          <img src="assets/blog-moon-love.jpg" alt="Moon Phases Love Life" loading="lazy">
+          <div class="bc-img-ov"></div>
+          <span class="bc-cat-pill">Moon & Planets</span>
+        </div>
+        <div class="bc-body">
+          <div class="bc-title">How Moon Phases Affect Your Love Life (And the Best Time to Start Dating)</div>
+          <p class="bc-excerpt">The lunar cycle has a measurable effect on human emotions and connection. Here's exactly which moon phases to use for first dates, declarations of love, and commitment.</p>
+          <div class="bc-meta">
+            <span>⏱ 6 min · Mar 6</span>
+            <a href="blog/moon-phases-love-life.html" class="bc-read">Read →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card reveal reveal-delay-2">
+        <div class="bc-img">
+          📱
+          <!-- IMAGE PROMPT: "Stylish overhead flat lay of a smartphone showing a dating app interface with astrology compatibility chart, surrounded by rose petals, crystals, and a cup of tea, warm and cosy lifestyle photography" -->
+          <img src="assets/blog-best-app.jpg" alt="Best Astrology Dating App 2025" loading="lazy">
+          <div class="bc-img-ov"></div>
+          <span class="bc-cat-pill">Dating Tips</span>
+        </div>
+        <div class="bc-body">
+          <div class="bc-title">Best Astrology Dating Apps in 2025: The Complete Comparison</div>
+          <p class="bc-excerpt">We tested every astrology-based dating app. Here's our honest breakdown of which apps actually use meaningful astrological data — and which are just slapping zodiac stickers on a swipe interface.</p>
+          <div class="bc-meta">
+            <span>⏱ 11 min · Mar 1</span>
+            <a href="blog/best-astrology-dating-apps.html" class="bc-read">Read →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card reveal reveal-delay-3">
+        <div class="bc-img">
+          ♈
+          <!-- IMAGE PROMPT: "Artistic photo representing Aries zodiac sign — bold red and gold tones, a ram constellation drawn in fire on a dark sky, dramatic celestial editorial photography" -->
+          <img src="assets/blog-aries.jpg" alt="Aries Compatibility" loading="lazy">
+          <div class="bc-img-ov"></div>
+          <span class="bc-cat-pill">Astrology</span>
+        </div>
+        <div class="bc-body">
+          <div class="bc-title">Aries Love Compatibility: Who Can Keep Up With the Ram?</div>
+          <p class="bc-excerpt">Aries loves fast, hard, and passionately. Not every sign can keep up with that energy. Here's who's built for an Aries relationship — and who will inevitably get left behind.</p>
+          <div class="bc-meta">
+            <span>⏱ 7 min · Feb 25</span>
+            <a href="blog/aries-compatibility-guide.html" class="bc-read">Read →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card reveal">
+        <div class="bc-img">
+          🛡️
+          <!-- IMAGE PROMPT: "Clean editorial photo representing online safety — a smartphone with a shield and heart icon, soft purple and pink tones, minimal modern still life photography" -->
+          <img src="assets/blog-safety.jpg" alt="Online Dating Safety Tips" loading="lazy">
+          <div class="bc-img-ov"></div>
+          <span class="bc-cat-pill">Dating Tips</span>
+        </div>
+        <div class="bc-body">
+          <div class="bc-title">Online Dating Safety: 15 Rules Everyone Should Follow in 2025</div>
+          <p class="bc-excerpt">From spotting catfishes to safe first meetings — a complete safety guide for anyone dating online, written with input from our Trust &amp; Safety team and relationship experts.</p>
+          <div class="bc-meta">
+            <span>⏱ 8 min · Feb 20</span>
+            <a href="blog/online-dating-safety-tips.html" class="bc-read">Read →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card reveal reveal-delay-1">
+        <div class="bc-img">
+          💕
+          <!-- IMAGE PROMPT: "Aesthetic photo of a couple holding hands across a café table, only hands and cups visible, warm tones, steam rising from coffee cups, romantic intimate moment, soft natural light photography" -->
+          <img src="assets/blog-soulmate.jpg" alt="How to Find Your Soulmate" loading="lazy">
+          <div class="bc-img-ov"></div>
+          <span class="bc-cat-pill">Relationships</span>
+        </div>
+        <div class="bc-body">
+          <div class="bc-title">How to Find Your Soulmate: What Science, Psychology &amp; Astrology All Agree On</div>
+          <p class="bc-excerpt">Surprising research shows cosmic frameworks and psychological science predict long-term compatibility in remarkably similar ways. Here's what the data says about finding your person.</p>
+          <div class="bc-meta">
+            <span>⏱ 13 min · Feb 14</span>
+            <a href="blog/find-soulmate-app.html" class="bc-read">Read →</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div class="newsletter-box reveal">
+      <div style="font-size:2.5rem;margin-bottom:14px">🌙</div>
+      <h2 class="nl-h2">Get weekly <em>cosmic insights</em></h2>
+      <p class="nl-sub">Every Monday — your personalised weekly astrology forecast, a tarot card for the week ahead, and our best new dating insights. Free forever.</p>
+      <div class="nl-form">
+        <input type="email" placeholder="your@email.com" aria-label="Email for cosmic newsletter">
+        <button type="button" onclick="subscribeNewsletter(this)">Subscribe ✨</button>
+      </div>
+      <p style="font-size:.74rem;color:var(--text-3);margin-top:12px;">No spam, ever. Unsubscribe anytime. Read our <a href="privacy.html" style="color:var(--rose);">Privacy Policy</a>.</p>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="nav-logo" style="margin-bottom:14px;display:inline-flex;">
+          <div class="nav-logo-icon" style="width:32px;height:32px;overflow:hidden;"><img src="assets/logo2.png" alt="" style="width:100%;height:100%;object-fit:cover;" onerror="this.outerHTML='💫'"></div>
+          <span class="nav-logo-text" style="font-size:1.3rem;font-weight:200;">simmmy</span>
+        </a>
+        <p class="footer-brand-desc">Connecting soulmates through astrology, tarot, numerology, and AI.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Instagram">📷</a>
+          <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+          <a href="#" class="social-link" aria-label="TikTok">🎵</a>
+          <a href="#" class="social-link" aria-label="Facebook">📘</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Discover</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="success-stories.html">Success Stories</a></li>
+          <li><a href="premium.html">Premium</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Support</div>
+        <ul class="footer-links">
+          <li><a href="help.html">Help Centre</a></li>
+          <li><a href="safety.html">Safety Tips</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="community-guidelines.html">Guidelines</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Legal</div>
+        <ul class="footer-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li><a href="cookie-policy.html">Cookie Policy</a></li>
+          <li><a href="accessibility.html">Accessibility</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-bottom-text">© 2025 simmmy Inc. All rights reserved. Made with ❤️ and ✨</p>
+      <div class="footer-bottom-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="cookie-policy.html">Cookies</a>
+        <a href="sitemap.xml">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/shared.js"></script>
+<script>
+function subscribeNewsletter(btn) {
+  const input = btn.parentElement.querySelector('input');
+  if (!input.value || !input.value.includes('@')) {
+    input.style.borderColor = 'var(--rose)';
+    input.placeholder = 'Please enter a valid email';
+    return;
+  }
+  btn.textContent = '✅ Subscribed!';
+  btn.disabled = true;
+  input.disabled = true;
+  input.value = '';
+  input.placeholder = 'Welcome to the cosmic community!';
+}
+</script>
+</body>
+</html>

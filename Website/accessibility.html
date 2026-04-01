@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accessibility Statement – simmmy</title>
+<meta name="description" content="simmmy's commitment to accessibility. We strive to make our app and website usable by everyone, regardless of ability.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.simmmy.com/accessibility.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💫</text></svg>">
+<link rel="stylesheet" href="assets/shared.css">
+<style>
+.access-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin:48px 0;}
+.access-card{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius);padding:28px;backdrop-filter:blur(12px);transition:var(--transition);}
+.access-card:hover{transform:translateY(-4px);border-color:var(--border-hover);}
+.ac-icon{font-size:2rem;margin-bottom:12px;display:block;}
+.ac-title{font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:9px;}
+.ac-body{font-size:.86rem;color:var(--text-2);line-height:1.8;}
+@media(max-width:640px){.access-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div id="starfield" aria-hidden="true"></div>
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon" style="overflow:hidden;"><img src="assets/logo2.png" alt="simmmy" style="width:100%;height:100%;object-fit:cover;" onerror="this.outerHTML='💫'"></div>
+    <span class="nav-logo-text" style="font-size:1.5rem;font-weight:200;">simmmy</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="help.html">Help</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="btn-theme" id="themeToggle" aria-label="Toggle theme">🌙</button>
+    <a href="download.html" class="btn btn-primary">📲 Download App</a>
+  </div>
+  <button class="nav-hamburger" id="hamburgerBtn" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="index.html">Home</a><a href="help.html">Help</a><a href="contact.html">Contact</a>
+  <a href="download.html" class="btn btn-primary" style="text-align:center;justify-content:center;">📲 Download App</a>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero-badge">♿ Accessibility</div>
+  <h1>Accessible to <em>Everyone</em></h1>
+  <p class="page-hero-sub">We believe love and connection should be available to all people. simmmy is committed to building an inclusive, accessible experience.</p>
+</div>
+
+<main class="legal-body" style="position:relative;z-index:1;">
+  <div class="container-sm">
+
+    <div class="last-updated-pill">📅 Last reviewed: January 2025</div>
+
+    <div class="legal-section">
+      <h2>Our Commitment</h2>
+      <p>simmmy Inc. is committed to ensuring digital accessibility for people with disabilities. We continually improve the user experience for everyone and apply relevant accessibility standards to our website and mobile applications.</p>
+      <p>We aim to conform to the <strong>Web Content Accessibility Guidelines (WCAG) 2.1 Level AA</strong> for our website, and follow platform-specific accessibility guidelines for iOS (Apple Human Interface Guidelines) and Android (Material Design Accessibility).</p>
+    </div>
+
+    <div class="access-grid">
+      <div class="access-card reveal">
+        <span class="ac-icon">🔤</span>
+        <div class="ac-title">Screen Reader Support</div>
+        <p class="ac-body">Our website and app include proper ARIA labels, semantic HTML, and meaningful alt text on images to support screen readers such as VoiceOver (iOS/macOS) and TalkBack (Android).</p>
+      </div>
+      <div class="access-card reveal reveal-delay-1">
+        <span class="ac-icon">🎨</span>
+        <div class="ac-title">Colour & Contrast</div>
+        <p class="ac-body">We maintain a minimum contrast ratio of 4.5:1 for normal text and 3:1 for large text. Our light and dark themes both meet WCAG AA contrast requirements. Colour is never used as the sole means of conveying information.</p>
+      </div>
+      <div class="access-card reveal reveal-delay-2">
+        <span class="ac-icon">⌨️</span>
+        <div class="ac-title">Keyboard Navigation</div>
+        <p class="ac-body">All website functionality is available via keyboard. Focus indicators are visible throughout the site. Tab order follows a logical reading sequence. Modal dialogs trap focus appropriately.</p>
+      </div>
+      <div class="access-card reveal reveal-delay-3">
+        <span class="ac-icon">📱</span>
+        <div class="ac-title">Mobile Accessibility</div>
+        <p class="ac-body">The simmmy app supports Dynamic Type on iOS and font scaling on Android. Touch targets meet minimum size requirements. The app works with Switch Control and other assistive technologies.</p>
+      </div>
+      <div class="access-card reveal">
+        <span class="ac-icon">🎬</span>
+        <div class="ac-title">Motion & Animation</div>
+        <p class="ac-body">We respect the <code>prefers-reduced-motion</code> system setting. Users who prefer reduced motion will see minimal animations across our website. All decorative animations can be paused.</p>
+      </div>
+      <div class="access-card reveal reveal-delay-1">
+        <span class="ac-icon">🌍</span>
+        <div class="ac-title">Language & Reading</div>
+        <p class="ac-body">The page language is programmatically set. Content uses plain, clear language. We avoid jargon where possible. Multi-language support (including Hindi, Tamil, Telugu) is in development for 2025.</p>
+      </div>
+    </div>
+
+    <div class="legal-section">
+      <h2>Known Limitations</h2>
+      <p>While we strive for full accessibility, we acknowledge some current limitations:</p>
+      <ul>
+        <li>Some older user-generated profile photos may lack descriptive alt text — we are working on AI-generated descriptions for these.</li>
+        <li>The zodiac wheel animation on the homepage may be difficult to interpret for screen reader users — we provide equivalent text-based information nearby.</li>
+        <li>Our in-app tarot card reading feature is being enhanced with audio descriptions in a future update.</li>
+      </ul>
+    </div>
+
+    <div class="legal-section">
+      <h2>Feedback & Contact</h2>
+      <p>We welcome your feedback on the accessibility of simmmy. If you experience any accessibility barriers or have suggestions for improvement, please contact us:</p>
+      <div class="info-box">
+        <strong>Accessibility Team:</strong> <a href="mailto:accessibility@simmmy.com">accessibility@simmmy.com</a><br>
+        <strong>General Support:</strong> <a href="contact.html">Contact Form</a><br>
+        We aim to respond to all accessibility feedback within 2 business days.
+      </div>
+      <p>If you are unsatisfied with our response, you may contact the relevant accessibility authority in your country. In the UK, this is the Equality and Human Rights Commission. In the EU, your national equality body.</p>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="nav-logo" style="margin-bottom:14px;display:inline-flex;">
+          <div class="nav-logo-icon" style="width:32px;height:32px;overflow:hidden;"><img src="assets/logo2.png" alt="" style="width:100%;height:100%;object-fit:cover;" onerror="this.outerHTML='💫'"></div>
+          <span class="nav-logo-text" style="font-size:1.3rem;font-weight:200;">simmmy</span>
+        </a>
+        <p class="footer-brand-desc">Cosmic soulmate matching powered by AI, astrology, and tarot.</p>
+      </div>
+      <div><div class="footer-col-title">Navigate</div><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="events.html">Events</a></li><li><a href="success-stories.html">Stories</a></li><li><a href="download.html">Download</a></li></ul></div>
+      <div><div class="footer-col-title">Help</div><ul class="footer-links"><li><a href="help.html">Help Centre</a></li><li><a href="safety.html">Safety</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><div class="footer-col-title">Legal</div><ul class="footer-links"><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="cookie-policy.html">Cookies</a></li><li><a href="accessibility.html">Accessibility</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-bottom-text">© 2025 simmmy Inc. All rights reserved.</p>
+      <div class="footer-bottom-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="cookie-policy.html">Cookies</a></div>
+    </div>
+  </div>
+</footer>
+<script src="assets/shared.js"></script>
+</body>
+</html>

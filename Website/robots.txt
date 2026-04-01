@@ -1,0 +1,43 @@
+# simmmy.com robots.txt
+# https://www.simmmy.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Disallow internal/private paths
+Disallow: /api/
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /settings/
+Disallow: /messages/
+Disallow: /matches/
+Disallow: /*.json$
+Disallow: /cdn-cgi/
+
+# Allow all important pages
+Allow: /index.html
+Allow: /download.html
+Allow: /events.html
+Allow: /success-stories.html
+Allow: /premium.html
+Allow: /blog.html
+Allow: /blog/
+Allow: /help.html
+Allow: /contact.html
+Allow: /safety.html
+Allow: /community-guidelines.html
+Allow: /privacy.html
+Allow: /terms.html
+Allow: /cookie-policy.html
+Allow: /accessibility.html
+Allow: /sitemap.xml
+
+# Allow all assets
+Allow: /assets/
+
+# Crawl delay for polite bots
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://www.simmmy.com/sitemap.xml
+Sitemap: https://www.simmmy.com/sitemap-blog.xml
